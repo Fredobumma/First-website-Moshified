@@ -1,0 +1,247 @@
+/* Basic Styles */
+:root {
+  --color-primary: #2584ff;
+  --color-secondary: #00d9ff;
+  --color-accent: #ff3400;
+  --color-headings: #1b0760;
+  --color-body: #918ca4;
+  --border-radius: 30px;
+}
+
+*,
+*::before,
+*::after {
+  border: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  line-height: 1.5;
+  margin: 2rem;
+}
+
+/* Typography */
+h2,
+h3 {
+  color: var(--color-headings);
+  margin-bottom: 0.7rem;
+}
+
+h1 {
+  color: white;
+  font-size: 7rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+p {
+  color: var(--color-body);
+  margin-top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
+
+  h1 {
+    font-size: 8rem;
+  }
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+
+.link-arrow {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.link-arrow::after {
+  content: "-->";
+  margin-left: 0.5rem;
+  transition: margin 0.15s;
+}
+
+.link-arrow:hover::after {
+  margin-left: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .link-arrow {
+    font-size: 1.5rem;
+  }
+}
+
+/* Badges */
+.badge {
+  border-radius: 20px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 0.8rem 2rem;
+  white-space: nowrap;
+}
+
+.primary--badge {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.secondary--badge {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.small--badge {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0.5rem 1.2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .badge {
+    font-size: 1.5rem;
+    padding: 0.8rem 1.7rem;
+  }
+
+  .small--badge {
+    font-size: 1.2rem;
+    padding: 0.8rem 1rem;
+  }
+}
+
+/* Lists */
+.list {
+  color: var(--color-headings);
+  list-style: none;
+  padding-left: 0;
+}
+
+.list--inline li {
+  display: inline-block;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  margin-right: 2rem;
+}
+
+.list--tick li {
+  list-style-image: url(/images/tick.svg);
+  font-weight: 500;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 0.9rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .list--tick li {
+    margin-bottom: 1.5rem;
+    padding-left: 0.3rem;
+  }
+}
+
+/* Icons */
+.icon {
+  width: 4rem;
+  height: 4rem;
+}
+
+.icon--primary {
+  color: var(--color-primary);
+}
+
+.icon-container {
+  background-color: #f3f9fa;
+  border-radius: 100%;
+  height: 6.4rem;
+  width: 6.4rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Buttons and Inputs */
+.btn {
+  border-radius: var(--border-radius);
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  padding: 1.5rem 2rem;
+  letter-spacing: 0.1rem;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+
+.btn--primary {
+  background-color: white;
+  border-color: var(--color-headings);
+  color: var(--color-headings);
+}
+
+.btn--secondary {
+  background-color: var(--color-headings);
+}
+
+.btn--tertiary {
+  background-color: var(--color-accent);
+  margin: 0.4rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn--alt {
+  background-color: var(--color-secondary);
+}
+
+.input-search {
+  font-size: 1.7rem;
+  display: flex;
+  width: max-content;
+  border-radius: var(--border-radius);
+  box-shadow: 5px 5px 50px 20px rgb(235, 235, 235);
+  overflow: hidden;
+}
+
+input[name="search"] {
+  display: inline;
+  flex-grow: 1;
+  color: var(--color-headings);
+  outline: 0;
+  margin: 0 1.5rem;
+}
+
+.input-search ::placeholder {
+  color: #cdcbd7;
+}
+
+.icon-search {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+@media screen and (min-width: 464px) {
+  .input-search {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .input-search,
+  .input-search .btn--tertiary {
+    font-size: 1.5rem;
+  }
+}
