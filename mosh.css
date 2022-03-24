@@ -13,6 +13,7 @@
 *::before,
 *::after {
   border: 0;
+  grid-gap: 2rem;
 }
 
 html {
@@ -253,11 +254,11 @@ input[name="search"] {
 }
 
 .media__image {
-  margin: 3.7rem 2rem 0 0;
+  margin: 3.7rem 0.5rem 0 0;
 }
 
 .media__title {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Quotes */
@@ -301,3 +302,22 @@ input[name="search"] {
     font-size: 1.6rem;
   }
 }
+
+/* Grid */
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Testimonials */
