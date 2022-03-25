@@ -194,7 +194,7 @@ a {
   color: white;
   font-size: 1.7rem;
   font-weight: 600;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   padding: 1.5rem 2rem;
   letter-spacing: 0.1rem;
   border: 2px solid rgba(0, 0, 0, 0);
@@ -219,6 +219,8 @@ a {
 
 .btn--alt {
   background-color: var(--color-secondary);
+  font-size: 1.5rem;
+  padding: 2rem 5rem;
 }
 
 .input-search {
@@ -245,7 +247,7 @@ input[name="search"] {
 .icon-search {
   width: 2rem;
   height: 2rem;
-  margin-right: 1rem;
+  margin-right: -1rem;
 }
 
 @media screen and (min-width: 464px) {
@@ -346,4 +348,46 @@ input[name="search"] {
   position: absolute;
   top: 2rem;
   right: -32px;
+}
+
+/* Callouts */
+.callout {
+  background-color: var(--color-primary);
+  text-align: center;
+  padding: 3.5rem;
+  border-radius: 10px;
+}
+
+.callout__heading,
+.callout__heading + p {
+  color: white;
+}
+
+.callout__heading {
+  margin-top: 1rem;
+  font-size: 3.5rem;
+}
+
+.callout__heading + p {
+  margin: 1rem 0 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .callout .grid--1x2 {
+    grid-template-columns: 1fr auto;
+    place-items: center;
+  }
+
+  .callout__heading {
+    margin-top: 0;
+  }
+
+  .callout__content {
+    text-align: start;
+    margin: 1rem;
+  }
+
+  .callout .btn {
+    margin: 0 0 0 1rem;
+  }
 }
