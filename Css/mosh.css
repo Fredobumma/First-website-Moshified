@@ -282,7 +282,7 @@ input[name="search"] {
   }
 }
 
-/* Cards and Plan */
+/* Cards and Plans */
 .card {
   border-radius: 10px;
   box-shadow: 0px 0px 50px 1px rgba(160, 160, 160, 0.5);
@@ -546,6 +546,43 @@ input[name="search"] {
 .collapsible--expanded .collapsible__content {
   opacity: 1;
   max-height: 100vh;
+}
+
+/* Blocks */
+.block {
+  padding: 6rem 2rem;
+}
+
+.block--dark {
+  background-color: black;
+}
+
+.block--dark p {
+  color: #7b858b;
+}
+
+.block__header {
+  text-align: center;
+}
+
+.block__heading {
+  margin-top: 0;
+  color: white;
+}
+
+.block--skewed-right {
+  padding-bottom: 10rem;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+}
+
+.block--skewed-left {
+  padding-bottom: 10rem;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
 /* Navigation Bar */
