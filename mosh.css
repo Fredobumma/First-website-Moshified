@@ -59,6 +59,10 @@ p {
   h1 {
     font-size: 8rem;
   }
+
+  h4 {
+    font-size: 1.5rem;
+  }
 }
 
 /* Links */
@@ -92,25 +96,26 @@ a {
 .badge {
   border-radius: 20px;
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 600;
   padding: 0.8rem 2rem;
   white-space: nowrap;
+  letter-spacing: 0.1rem;
 }
 
 .primary--badge {
+  filter: grayscale(25%);
   background-color: var(--color-secondary);
   color: white;
 }
 
 .secondary--badge {
-  background-color: var(--color-primary);
+  background-color: #126de4;
   color: white;
 }
 
 .small--badge {
-  font-size: 1.5rem;
-  font-weight: 600;
-  padding: 0.5rem 1.2rem;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -120,8 +125,8 @@ a {
   }
 
   .small--badge {
-    font-size: 1.2rem;
-    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    padding: 0.6rem 0.8rem;
   }
 }
 
@@ -139,18 +144,24 @@ a {
   margin-right: 2rem;
 }
 
+.list--tick {
+  margin: 0.5rem 0 2rem;
+  font-size: 1.8rem;
+}
+
 .list--tick li {
   list-style-image: url(/images/tick.svg);
   font-weight: 500;
   margin-left: 2rem;
   margin-bottom: 2rem;
-  padding-left: 0.9rem;
+  padding-left: 0.5rem;
 }
 
 @media screen and (min-width: 1024px) {
   .list--tick li {
     margin-bottom: 1.5rem;
-    padding-left: 0.3rem;
+    padding-left: 0;
+    font-size: 1.5rem;
   }
 }
 
@@ -200,6 +211,8 @@ a {
 }
 
 .btn--primary {
+  font-size: 1.5rem;
+  padding: 1.5rem 10rem;
   background-color: white;
   border-color: var(--color-headings);
   color: var(--color-headings);
@@ -207,6 +220,7 @@ a {
 
 .btn--secondary {
   background-color: var(--color-headings);
+  color: white;
 }
 
 .btn--tertiary {
@@ -256,9 +270,118 @@ input[name="search"] {
 }
 
 @media screen and (min-width: 1024px) {
+  .btn--primary {
+    font-size: 1.2rem;
+    padding: 1.5rem 8rem;
+    font-weight: 600;
+  }
+
   .input-search,
   .input-search .btn--tertiary {
     font-size: 1.5rem;
+  }
+}
+
+/* Cards and Plan */
+.card {
+  border-radius: 10px;
+  box-shadow: 0px 0px 50px 1px rgba(160, 160, 160, 0.5);
+  place-self: center;
+}
+
+.plan__header {
+  background-color: var(--color-secondary);
+  height: 30%;
+  color: white;
+  padding: 2rem 2.5rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+  position: relative;
+  border-radius: 10px 10px 0 0;
+}
+
+.plan__header-special {
+  background-color: var(--color-primary);
+}
+
+.plan__heading {
+  margin: 0 0 1rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+.plan__header > img {
+  height: 90px;
+  position: absolute;
+  top: -5px;
+  right: 30px;
+}
+
+.plan__price {
+  font-size: 4rem;
+  font-weight: 400;
+  margin-right: 0.5rem;
+}
+
+.plan__header .small--badge {
+  margin-left: 1.5rem;
+  position: absolute;
+  margin-top: 2.5rem;
+}
+
+.plan__header p {
+  color: white;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  margin: 1rem 0 0;
+}
+
+.plan__content {
+  padding: 2rem 3.5rem;
+}
+
+.plan__contentone .btn {
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .plan__header {
+    font-size: 1.4rem;
+    padding: 2.5rem 3rem;
+  }
+
+  .plan__header-special {
+    padding: 3.5rem 3.5rem 4.5rem;
+  }
+
+  .plan__heading {
+    margin-bottom: 0;
+  }
+
+  .plan__price {
+    font-weight: 300;
+  }
+
+  .plan__header .small--badge {
+    margin-left: 1rem;
+  }
+
+  .plan__header p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  .plan__content {
+    padding: 1.5rem 4rem;
+  }
+
+  .plan__contentone .btn {
+    margin-top: 3.75rem;
+  }
+
+  .plan__contenttwo .btn {
+    margin-top: 3rem;
+    padding: 1.5rem 9rem;
   }
 }
 
@@ -433,6 +556,7 @@ input[name="search"] {
   flex-wrap: wrap;
   padding: 0 1rem;
   align-items: center;
+  grid-gap: 0;
 }
 
 .nav__list {
@@ -472,7 +596,6 @@ input[name="search"] {
 
 .nav__brand {
   transform: translateY(5px);
-  height: fit-content;
 }
 
 @media screen and (min-width: 768px) {
