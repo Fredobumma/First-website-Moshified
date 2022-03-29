@@ -7,6 +7,7 @@
   --color-body: #918ca4;
   --color-body-darker: #5c5577;
   --border-radius: 30px;
+  --grid-gap: 0;
 }
 
 *,
@@ -27,15 +28,18 @@ body {
 }
 
 /* Typography */
+h1,
 h2,
 h3 {
   color: var(--color-headings);
   margin-bottom: 0.7rem;
+  line-height: 1.1;
 }
 
 h1 {
   color: white;
   font-size: 7rem;
+  margin-bottom: 0;
 }
 
 h2 {
@@ -202,17 +206,16 @@ a {
 .btn {
   border-radius: var(--border-radius);
   color: white;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 1rem;
   padding: 1.5rem 2rem;
   letter-spacing: 0.1rem;
   border: 2px solid rgba(0, 0, 0, 0);
+  --padding-vertical: 10rem;
 }
 
 .btn--primary {
-  font-size: 1.5rem;
-  padding: 1.5rem 10rem;
+  padding: 1.5rem var(--padding-vertical);
   background-color: white;
   border-color: var(--color-headings);
   color: var(--color-headings);
@@ -225,14 +228,11 @@ a {
 
 .btn--tertiary {
   background-color: var(--color-accent);
-  margin: 0.4rem;
-  display: inline-flex;
-  align-items: center;
+  padding: 2rem var(--padding-vertical);
 }
 
 .btn--alt {
   background-color: var(--color-secondary);
-  font-size: 1.5rem;
   padding: 2rem 5rem;
 }
 
@@ -381,7 +381,7 @@ input[name="search"] {
 
   .plan__contenttwo .btn {
     margin-top: 3rem;
-    padding: 1.5rem 9rem;
+    padding: 1.5rem calc(var(--padding-vertical) - 1rem);
   }
 }
 
@@ -557,7 +557,7 @@ input[name="search"] {
   background-color: black;
 }
 
-.block--dark p {
+.block--dark {
   color: #7b858b;
 }
 
@@ -568,6 +568,10 @@ input[name="search"] {
 .block__heading {
   margin-top: 0;
   color: white;
+}
+
+.block img {
+  width: 100%;
 }
 
 .block--skewed-right {
@@ -655,5 +659,31 @@ input[name="search"] {
 
   .nav__item {
     border: 0;
+  }
+}
+
+/* Hero */
+.hero {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}
+
+.hero__tagline {
+  color: #b9c3cf;
+  margin: 1rem 0 4rem;
+  letter-spacing: 0.1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__header {
+    text-align: left;
+    align-self: center;
+  }
+
+  .hero {
+    padding-top: 0;
+  }
+
+  .hero__header .btn--tertiary {
+    padding: 2rem 3rem;
   }
 }
