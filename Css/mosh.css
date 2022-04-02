@@ -395,11 +395,16 @@ input[name="search"] {
 }
 
 .media__image {
-  margin: 3.7rem 0.5rem 0 0;
+  margin: 3rem 0.5rem 0 0;
 }
 
 .media__title {
+  color: white;
   margin-bottom: 0.5rem;
+}
+
+.media__text {
+  color: #7b858b;
 }
 
 /* Quotes */
@@ -559,10 +564,12 @@ input[name="search"] {
 
 .block--dark {
   background-color: black;
+  color: #7b858b;
 }
 
-.block--dark {
-  color: #7b858b;
+.block--dark h2 {
+  color: white;
+  margin-bottom: 2rem;
 }
 
 .block__header {
@@ -579,18 +586,24 @@ input[name="search"] {
 }
 
 .block--skewed-right {
-  padding-bottom: 10rem;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+  padding-bottom: 15rem;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
 }
 
 .block--skewed-left {
   padding-bottom: 10rem;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
 
 .container {
   max-width: 1140px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .block--dark h2 {
+    margin-bottom: 5rem;
+  }
 }
 
 /* Navigation Bar */
@@ -667,10 +680,6 @@ input[name="search"] {
 }
 
 /* Hero */
-.hero {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
-}
-
 .hero__tagline {
   color: #b9c3cf;
   margin: 1rem 0 4rem;
@@ -693,7 +702,7 @@ input[name="search"] {
 }
 
 /* Domain Block */
-.domain__content .domain__text {
+.domain__text {
   margin-top: 2rem;
 }
 
