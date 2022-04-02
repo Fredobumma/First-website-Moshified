@@ -105,7 +105,7 @@ a {
   border-radius: 20px;
   font-size: 1.8rem;
   font-weight: 600;
-  padding: 0.8rem 1.5rem;
+  padding: 0.8rem 2rem;
   white-space: nowrap;
   letter-spacing: 0.1rem;
 }
@@ -216,7 +216,6 @@ a {
   letter-spacing: 0.1rem;
   border: 2px solid rgba(0, 0, 0, 0);
   --padding-vertical: 10rem;
-  white-space: nowrap;
 }
 
 .btn--primary {
@@ -224,10 +223,9 @@ a {
   background-color: white;
   border-color: var(--color-headings);
   color: var(--color-headings);
-  transition: all .2s ease-out;
 }
 
-.btn--primary:hover {
+.btn--secondary {
   background-color: var(--color-headings);
   color: white;
 }
@@ -242,21 +240,13 @@ a {
   padding: 2rem 5rem;
 }
 
-.btn--special {
-  padding: 1.5rem 2rem;
-  margin: 0.4rem;
-  white-space: nowrap;
-}
-
 .input-search {
   font-size: 1.7rem;
   display: flex;
-  margin: 3rem auto;
-  max-width: 670px;
-  border-radius: var(--border-radius);
-  box-shadow: 5px 5px 30px 10px #e6ebee;
-  overflow: hidden;
   width: max-content;
+  border-radius: var(--border-radius);
+  box-shadow: 5px 5px 50px 20px rgb(235, 235, 235);
+  overflow: hidden;
 }
 
 input[name="search"] {
@@ -274,11 +264,10 @@ input[name="search"] {
 .icon-search {
   width: 2rem;
   height: 2rem;
-  margin-right: 0.5rem;
-  vertical-align: middle;
+  margin-right: -1rem;
 }
 
-@media screen and (min-width: 478px) {
+@media screen and (min-width: 464px) {
   .input-search {
     width: 100%;
   }
@@ -301,10 +290,7 @@ input[name="search"] {
 .card {
   border-radius: 10px;
   box-shadow: 0px 0px 50px 1px rgba(160, 160, 160, 0.5);
-}
-
-.plan {
-  transition: transform .2s ease-out;
+  place-self: center;
 }
 
 .plan__header {
@@ -318,15 +304,21 @@ input[name="search"] {
   border-radius: 10px 10px 0 0;
 }
 
-.plan--popular .plan__header {
+.plan__header-special {
   background-color: var(--color-primary);
-  position: relative;
 }
 
 .plan__heading {
   margin: 0 0 1rem;
   font-weight: 600;
   letter-spacing: 0.1rem;
+}
+
+.plan__header > img {
+  height: 90px;
+  position: absolute;
+  top: -5px;
+  right: 30px;
 }
 
 .plan__price {
@@ -352,33 +344,48 @@ input[name="search"] {
   padding: 2rem 3.5rem;
 }
 
-.plan__content .btn {
-  width: 100%;
-}
-
 .plan__contentone .btn {
   margin-top: 3rem;
 }
 
-.popular__image {
-  height: 90px;
-  width: 36px;
-  position: absolute;
-  top: -5px;
-  right: 30px;
-}
-
-.plan:hover {
-  transform: scale(1.05);
-}
-
 @media screen and (min-width: 1024px) {
-  .plan--popular {
-    transform: scale(1.1);
+  .plan__header {
+    font-size: 1.4rem;
+    padding: 2.5rem 3rem;
   }
 
-  .plan--popular:hover {
-    transform: scale(1.15);
+  .plan__header-special {
+    padding: 3.5rem 3.5rem 4.5rem;
+  }
+
+  .plan__heading {
+    margin-bottom: 0;
+  }
+
+  .plan__price {
+    font-weight: 300;
+  }
+
+  .plan__header .small--badge {
+    margin-left: 1rem;
+  }
+
+  .plan__header p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  .plan__content {
+    padding: 1.5rem 4rem;
+  }
+
+  .plan__contentone .btn {
+    margin-top: 3.75rem;
+  }
+
+  .plan__contenttwo .btn {
+    margin-top: 3rem;
+    padding: 1.5rem calc(var(--padding-vertical) - 1rem);
   }
 }
 
@@ -548,11 +555,14 @@ input[name="search"] {
 /* Blocks */
 .block {
   padding: 6rem 2rem;
-  color: #7b858b;
 }
 
 .block--dark {
   background-color: black;
+}
+
+.block--dark {
+  color: #7b858b;
 }
 
 .block__header {
@@ -581,7 +591,6 @@ input[name="search"] {
 .container {
   max-width: 1140px;
   margin: 0 auto;
-  gap: var(--grid-gap);
 }
 
 /* Navigation Bar */
@@ -592,7 +601,7 @@ input[name="search"] {
   flex-wrap: wrap;
   padding: 0 1rem;
   align-items: center;
-  grid-gap: var(--grid-gap);
+  grid-gap: 0;
 }
 
 .nav__list {
