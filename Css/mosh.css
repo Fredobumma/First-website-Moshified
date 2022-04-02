@@ -64,6 +64,10 @@ p {
     font-size: 8rem;
   }
 
+  h3 {
+    font-size: 2rem;
+  }
+
   h4 {
     font-size: 1.5rem;
   }
@@ -191,8 +195,8 @@ a {
 .icon-container {
   background-color: #f3f9fa;
   border-radius: 100%;
-  height: 64px;
-  width: 64px;
+  height: 56px;
+  width: 56px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -560,7 +564,7 @@ input[name="search"] {
   color: white;
 }
 
-.block--image {
+.block__image {
   width: 100%;
 }
 
@@ -708,4 +712,28 @@ input[name="search"] {
 .block-plans .card {
   max-width: 400px;
   margin: 0 auto;
+}
+
+/* Features Block */
+.feature {
+  gap: 4rem 2rem;
+  margin: 10rem 0;
+}
+
+.feature__header {
+  align-self: center;
+}
+
+.feature:first-of-type {
+  margin: 5rem 0;
+}
+
+.feature__heading {
+  margin: 1rem 0;
+}
+
+@media screen and (min-width: 768px) {
+ .feature:nth-of-type(even) .feature__header {
+    order: 2;
+  }
 }
